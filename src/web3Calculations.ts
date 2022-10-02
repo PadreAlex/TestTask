@@ -148,7 +148,7 @@ const setDocsInDataBase = async (dataArr: IgetOrderInfo[]): Promise<void> => {
 //Данная функция нужна для получения данных по запросу GetOrders
 export const getOrdersFullData = (dataArr: IgetOrderInfo[], args: IFunctionArgumentsGetOrder): IgetOrderInfo[] => {
     try {
-        if (!args.tokenA && !args.tokenB && !args.user && !args.active) return dataArr.filter((el: IgetOrderInfo) => el.isCancelled === false)
+        if (!args.tokenA && !args.tokenB && !args.user && !args.active) return dataArr
 
         if (args.tokenA) {
             dataArr = dataArr.filter((el: IgetOrderInfo) => el.tokenA === args.tokenA)
@@ -163,9 +163,10 @@ export const getOrdersFullData = (dataArr: IgetOrderInfo[], args: IFunctionArgum
         }
 
         if (args.active) {
-            const curData = args.active === "true" ? false : true
-            dataArr = dataArr.filter((el: IgetOrderInfo) => el.isCancelled === curData)
-            dataArr = dataArr.filter((el: IgetOrderInfo) => parseInt(el.amountLeftToFill) > 0)
+            if(args.active === "true") {
+                dataArr = dataArr.filter((el: IgetOrderInfo) => el.isCancelled === false)
+                dataArr = dataArr.filter((el: IgetOrderInfo) => parseInt(el.amountLeftToFill) > 0)
+            }
         }
 
         return dataArr
@@ -304,4 +305,4 @@ wsSubscriptionToEvents()
 //советую отключить данную функцию после первого запуска 
 //если планируете много перезапускать сервер
 
-onServerStart()
+// onServerStart()
