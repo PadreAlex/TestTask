@@ -165,6 +165,7 @@ export const getOrdersFullData = (dataArr: IgetOrderInfo[], args: IFunctionArgum
         if (args.active) {
             const curData = args.active === "true" ? false : true
             dataArr = dataArr.filter((el: IgetOrderInfo) => el.isCancelled === curData)
+            dataArr = dataArr.filter((el: IgetOrderInfo) => parseInt(el.amountLeftToFill) > 0)
         }
 
         return dataArr
