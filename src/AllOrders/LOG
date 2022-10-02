@@ -1,0 +1,5 @@
+2022/10/03-00:45:44.510 1cc4 Recovering log #251
+2022/10/03-00:45:44.510 1cc4 Level-0 table #253: started
+2022/10/03-00:45:44.562 1cc4 Level-0 table #253: 237 bytes OK
+2022/10/03-00:45:44.662 1cc4 Delete type=0 #251
+2022/10/03-00:45:44.662 1cc4 Delete type=3 #249
