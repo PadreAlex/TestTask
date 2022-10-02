@@ -11,3 +11,5 @@ HOST = "127.0.0.1"<br/>
 
 Запуск сервера происходит через <b>server.ts</b>. <br/> 
 Я запускаю через [ts-node](https://github.com/TypeStrong/ts-node "Github TS-NODE")
+
+[Postman API documentation](https://documenter.getpostman.com/view/23197292/2s83tGoBu7 "Postman")
