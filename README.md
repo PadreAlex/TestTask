@@ -9,5 +9,5 @@ INFURA_KEY = ""<br/>
 PORT = 8080<br/>
 HOST = "127.0.0.1"<br/>
 
-Запуск сервера происходит через <b>server.ts<b>.
+Запуск сервера происходит через <b>server.ts</b>. <br/> 
 Я запускаю через [ts-node](https://github.com/TypeStrong/ts-node "Github TS-NODE")
