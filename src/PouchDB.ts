@@ -17,6 +17,7 @@ export async function putDoc(object: IgetOrderInfo): Promise<void> {
     db.put(doc)
 }
 
+
 //Данная функция нужна для получения всех даных из базы данных
 export function getData(): IgetOrderInfo[] {
     let allData: IgetOrderInfo[] = db.allDocs({
